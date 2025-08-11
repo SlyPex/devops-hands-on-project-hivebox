@@ -3,7 +3,7 @@
 [![Telegram Group](https://img.shields.io/badge/Telegram_Group-%232ca5e0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/DevOpsHive/985)
 [![Fork on GitHub](https://img.shields.io/badge/Fork_On_GitHub-%2336465D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DevOpsHiveHQ/devops-hands-on-project-hivebox/fork)
 
-# HiveBox - DevOps End-to-End Hands-On Project
+<h1 align="center"> HiveBox - DevOps End-to-End Hands-On Project </h1>
 
 <p align="center">
   <a href="https://devopsroadmap.io/projects/hivebox" style="display: block; padding: .5em 0; text-align: center;">
@@ -23,33 +23,32 @@ You can fork this repository and start implementing the [HiveBox](https://devops
 
 The project aims to cover the whole Software Development Life Cycle (SDLC). That means each phase will cover all aspects of DevOps, such as planning, coding, containers, testing, continuous integration, continuous delivery, infrastructure, etc.
 
-Happy DevOpsing ♾️
+Happy DevOpsing ♾️💯
+> [!NOTE]
+> Ain't much but it's Honest Work
 
-## Before you start
+## Prerequisites
+> [!IMPORTANT]
+> You should have **Docker** installed in order to run this project.
 
-Here is a pre-start checklist:
-
-- ⭐ <a target="_blank" href="https://github.com/DevOpsHiveHQ/dynamic-devops-roadmap">Star the **roadmap** repo</a> on GitHub for better visibility.
-- ✉️ <a target="_blank" href="https://newsletter.devopsroadmap.io/subscribe">Join the community</a> for the project community activities, which include mentorship, job posting, online meetings, workshops, career tips and tricks, and more.
-- 🌐 <a target="_blank" href="https://t.me/DevOpsHive/985">Join the Telegram group</a> for interactive communication.
-
-## Preparation
-
-- [Create GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) (if you don't have one), then [fork this repository](https://github.com/DevOpsHiveHQ/devops-hands-on-project-hivebox/fork) and start from there.
-- [Create GitHub project board](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project) for this repository (use `Kanban` template).
-- Each phase should be presented as a pull request against the `main` branch. Don’t push directly to the main branch!
-- Document as you go. Always assume that someone else will read your project at any phase.
-- You can get senseBox IDs by checking the [openSenseMap](https://opensensemap.org/) website. Use 3 senseBox IDs close to each other (you can use the following [5eba5fbad46fb8001b799786](https://opensensemap.org/explore/5eba5fbad46fb8001b799786), [5c21ff8f919bf8001adf2488](https://opensensemap.org/explore/5c21ff8f919bf8001adf2488), and [5ade1acf223bd80019a1011c](https://opensensemap.org/explore/5ade1acf223bd80019a1011c)). Just copy the IDs, you will need them in the next steps.
-
-<br/>
-<p align="center">
-  <a href="https://devopsroadmap.io/projects/hivebox/" imageanchor="1">
-    <img src="https://img.shields.io/badge/Get_Started_Now-559e11?style=for-the-badge&logo=Vercel&logoColor=white" />
-  </a><br/>
-</p>
-
----
-
-## Implementation
-
-** ADD YOUR IMPLEMENTATION DOCUMENTATION HERE **
+## Usage
+1. Clone this repository using `git` command:
+  ```bash
+  git clone https://github.com/SlyPex/devops-hands-on-project-hivebox.git
+  ```
+2. `cd` into the repository directory:
+  ```
+  cd devops-hands-on-project-hivebox
+  ```
+3. Build the docker image:
+  ```bash
+  docker build . -t hivebox:0.0.1
+  ```
+4. Run the project using:
+  ```
+  docker run --rm hivebox:0.0.1
+  ```
+5. You should see an output like this:
+  ```
+  Current Version : v0.0.1
+  ```
