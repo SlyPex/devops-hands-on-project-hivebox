@@ -1,0 +1,10 @@
+Dockerfile
+requirements.in
+hivebox-venvs
+.git
+.gitignore
+*.pyc
+__pycache__
+README.md
+.mypy_cache
+__pycache__

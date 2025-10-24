@@ -1,0 +1,6 @@
+fastapi[standard]
+pytest
+pylint
+ruff
+mypy
+pytest-cov
