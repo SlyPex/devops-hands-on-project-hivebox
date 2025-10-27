@@ -1,9 +1,6 @@
-"""Module providing logging functionalities."""
-import logging
+"""API Endpoints"""
 from fastapi import FastAPI, HTTPException, status
-
-logging.basicConfig(level=logging.ERROR)
-logger = logging.getLogger(__name__)
+from .config import log ,VERSION
 
 app = FastAPI()
 
@@ -16,12 +13,11 @@ def welcome():
 @app.get("/version")
 async def version():
     """Endpoint returns the current API version"""
-    try:
-        with open(file="VERSION", mode="r", encoding="utf-8") as version_file:
-            return {"version": version_file.read().strip()}
-    except FileNotFoundError as e:
-        logger.error(" File Not Found : %s", str(e))
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR) from e
-    except PermissionError as e:
-        logger.error(" Permission Denied : %s", str(e))
-        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR) from e
+    if VERSION:
+        return {"version": VERSION}
+    log.warning("Request to Version endpoint responsed with an 500 error")
+    raise HTTPException(
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        detail="Service configuration unavailable"
+        )
+    
