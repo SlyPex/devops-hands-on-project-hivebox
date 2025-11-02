@@ -1,19 +1,21 @@
-"""Module provides configurations for the API"""
+"""Module provides configurations for the API."""
+
 import logging
 from pathlib import Path
+
 from rich.logging import RichHandler
 
-
 VERSION_FILE = Path(__file__).parent.parent / "VERSION"
+OPENSENSEMAP_API_BOXES_ENDPOINT_URL = "https://api.opensensemap.org/boxes"
 
 logging.basicConfig(
     level="NOTSET", format="%(levelname)s: %(message)s", handlers=[RichHandler()]
-    )
+)
 log = logging.getLogger("rich")
 
 
 try:
-    with open(file=VERSION_FILE, mode="r", encoding="utf-8") as version_file:
+    with VERSION_FILE.open(encoding="utf-8") as version_file:
         VERSION = version_file.readline().strip()
 except FileNotFoundError as e:
     log.error("Version file not found : %s", str(e))
